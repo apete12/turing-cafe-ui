@@ -41,6 +41,11 @@ describe('Test home page', () => {
   })
 
   it('Should add new reservation when user selects submit button, see reservation displayed on home page', () => {
+    cy.intercept("POST", 'http://localhost:3001/api/v1/reservations', {
+      statusCode: 200,
+      fixture: "reservationsPost.json"
+    })
+
     cy.get('.resy-form').get('.form').contains('h2', 'Make a New Reservation!')
     cy.get('.resy-form').get('.form').get('input[type="name"]')
       .type('Alex')
@@ -62,6 +67,4 @@ describe('Test home page', () => {
       .get('.resy-container').last().contains('Time: 7:00')
       .get('.resy-container').last().contains('Party Size: 3')
   })
-
-
 })
