@@ -7,7 +7,6 @@ import Form from '../components/Form/Form';
 function App() {
 const [reservations, setReservations] = useState([])
 
-
 useEffect(() => {
   fetchReservations()
   .then(data => setReservations(data))
@@ -16,8 +15,6 @@ useEffect(() => {
 function addReservation(newReservation) {
   setReservations([...reservations, newReservation])
 }
-console.log(reservations)
-
 
   return (
     <div className="App">

@@ -17,7 +17,6 @@ function submitReservation(e){
         time: time,
         number: partySize
     }
-    console.log(newReservation)
     addReservation(newReservation)
     clearForm()
 }
