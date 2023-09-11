@@ -31,10 +31,10 @@ function clearForm() {
 return (
     <form className='form'>
         <h2>Make a New Reservation!</h2>
-        <input type='text' placeholder='name' value={name} onChange={e => setName(e.target.value)}></input>
+        <input type='name' placeholder='name' value={name} onChange={e => setName(e.target.value)}></input>
         <input type='date' placeholder='date' value={date} onChange={e => setDate(e.target.value)}></input>
         <input type='time' placeholder='time' value={time} onChange={e => setTime(e.target.value)}></input>
-        <input type='text' placeholder='party size' value={partySize} onChange={e => setPartySize(e.target.value)}></input>
+        <input type='number' placeholder='party size' value={partySize} onChange={e => setPartySize(e.target.value)}></input>
         <button onClick={e => submitReservation(e)}>Submit</button>
     </form>
     )
