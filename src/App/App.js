@@ -10,7 +10,9 @@ const [error, setError] = useState('')
 
 useEffect(() => {
   fetchReservations()
-  .then(data => setReservations(data))
+  .then(data => {
+    setReservations(data)
+  })
   .catch(error => {
     setError(error)
     console.log(error.message)}
@@ -19,7 +21,6 @@ useEffect(() => {
 
 function addReservation(newReservation) {
   setReservations([...reservations, newReservation])
-  console.log(reservations)
 }
 
   return (

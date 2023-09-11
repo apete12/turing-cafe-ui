@@ -20,7 +20,6 @@ function submitReservation(e){
     }
     postReservations(newReservation)
     .then(data => {
-        console.log('check here', data)
         addReservation(data)
 
     }).catch(error => console.log(error.message))

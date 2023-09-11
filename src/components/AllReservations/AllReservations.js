@@ -1,7 +1,6 @@
 import './AllReservations.css'
 
 export default function AllReservations({reservations}) {
-    // console.log(reservations)
 
     const reservation = reservations.map((singleReservation) => {
         return (
