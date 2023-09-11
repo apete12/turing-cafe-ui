@@ -13,12 +13,17 @@ useEffect(() => {
   .then(data => setReservations(data))
 }, [])
 
+function addReservation(newReservation) {
+  setReservations([...reservations, newReservation])
+}
+console.log(reservations)
+
 
   return (
     <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
       <div className='resy-form'>
-          <Form/>
+          <Form addReservation={addReservation}/>
       </div>
       <div className='resy-container'>
         <AllReservations reservations={reservations}/>
