@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import fetchReservations from '../api-calls';
+import {fetchReservations} from '../api-calls';
 import AllReservations from '../components/AllReservations/AllReservations';
 import Form from '../components/Form/Form';
 
@@ -19,6 +19,7 @@ useEffect(() => {
 
 function addReservation(newReservation) {
   setReservations([...reservations, newReservation])
+  console.log(reservations)
 }
 
   return (

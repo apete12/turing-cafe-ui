@@ -1,5 +1,6 @@
 import './Form.css'
 import { useState } from 'react';
+import { postReservations } from '../../api-calls';
 
 
 export default function Form({addReservation}) {
@@ -17,7 +18,12 @@ function submitReservation(e){
         time: time,
         number: partySize
     }
-    addReservation(newReservation)
+    postReservations(newReservation)
+    .then(data => {
+        console.log('check here', data)
+        addReservation(data)
+
+    }).catch(error => console.log(error.message))
     clearForm()
 }
 
