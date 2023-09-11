@@ -1,0 +1,8 @@
+.reservation-container {
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    background: white;
+    width: 230px;
+    font-size: 10px;
+}

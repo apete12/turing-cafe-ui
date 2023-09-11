@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import fetchReservations from '../api-calls';
+import AllReservations from '../components/AllReservations/AllReservations';
 
 function App() {
 const [reservations, setReservations] = useState([])
@@ -11,7 +12,6 @@ useEffect(() => {
   .then(data => setReservations(data))
 }, [])
 
-console.log(reservations)
 
   return (
     <div className="App">
@@ -19,6 +19,7 @@ console.log(reservations)
       <div className='resy-form'>
       </div>
       <div className='resy-container'>
+        <AllReservations reservations={reservations}/>
       </div>
     </div>
   );
