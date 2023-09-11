@@ -29,8 +29,11 @@ function addReservation(newReservation) {
       <div className='resy-form'>
           <Form addReservation={addReservation}/>
       </div>
-      <div className='resy-container'>
-        <AllReservations reservations={reservations}/>
+      <div className="all-resy-container">
+        <h2 className='resy-title'>Find All Reservations Below:</h2>
+        <div className='resy-container'>
+          <AllReservations reservations={reservations}/>
+        </div>
       </div>
     </div>
   );
