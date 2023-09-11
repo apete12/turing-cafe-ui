@@ -1,14 +1,17 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import fetchReservations from '../api-calls';
 
 function App() {
-
+const [reservations, setReservations] = useState([])
 
 
 useEffect(() => {
   fetchReservations()
+  .then(data => setReservations(data))
 })
+
+console.log(reservations)
 
   return (
     <div className="App">
