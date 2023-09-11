@@ -6,7 +6,7 @@
   align-items: center;
   background-image: url('../assets/cafe-img.jpeg');
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -21,8 +21,8 @@
 
 .resy-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
 
 .resy-form {

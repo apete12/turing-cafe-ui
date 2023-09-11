@@ -6,10 +6,15 @@ import Form from '../components/Form/Form';
 
 function App() {
 const [reservations, setReservations] = useState([])
+const [error, setError] = useState('')
 
 useEffect(() => {
   fetchReservations()
   .then(data => setReservations(data))
+  .catch(error => {
+    setError(error)
+    console.log(error.message)}
+    )
 }, [])
 
 function addReservation(newReservation) {
