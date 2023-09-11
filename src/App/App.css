@@ -24,3 +24,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
+.resy-form {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 10px;
+}
