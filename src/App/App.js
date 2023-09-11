@@ -9,7 +9,7 @@ const [reservations, setReservations] = useState([])
 useEffect(() => {
   fetchReservations()
   .then(data => setReservations(data))
-})
+}, [])
 
 console.log(reservations)
 
